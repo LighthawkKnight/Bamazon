@@ -42,7 +42,7 @@ function viewLowInventory(){
             console.log("\nNo products found with less than 5 inventory\n")
         else {
             console.log("=============\nLow Inventory\n=============");
-            console.log("ID | Product | Inventory");
+            console.log("ID | Product | Stock");
             for (var i = 0; i < res.length; i++)
                 console.log(res[i].item_id + " | " + res[i].product_name + " | " + res[i].stock_quantity);
         }
