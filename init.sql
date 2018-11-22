@@ -1,13 +1,14 @@
-DROP DATABASE IF EXISTS bamazon;
-create database bamazon;
+-- DROP DATABASE IF EXISTS bamazon;
+-- create database bamazon;
 
 use bamazon;
 
+drop table if exists products;
 create table products (
 	item_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(40),
     department_name VARCHAR(40),
-    price DOUBLE(30,2),
+    price DECIMAL(30,2),
     stock_quantity INT(20)
 );
 
@@ -22,3 +23,11 @@ values("Laptop", "Electronics", 1000, 10),
     ("TV Series", "Video", 30, 70),
     ("Jewelry", "Clothing", 800, 10),
     ("Jeans", "Clothing", 40, 100);
+    
+
+alter table products
+add column product_sales DECIMAL(30,2) after stock_quantity;
+
+update products
+set product_sales = 0;
+

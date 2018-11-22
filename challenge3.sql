@@ -13,7 +13,7 @@ add column product_sales DECIMAL(30,2) after over_head_costs;
 insert into departments(department_name, over_head_costs)
 values("Electronics", 6000),
 		("Clothing", 2000),
-        ("Video", 1000),
+        ("Video", 1500),
         ("Books", 1000);
         
 
